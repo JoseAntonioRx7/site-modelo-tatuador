@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- 1. METADADOS + TAILWIND -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site modelo — Apresentação para estúdio de tatuagem</title>
+<meta name="description" content="Site modelo para apresentação de um estúdio de tatuagem. Textos, contatos e imagens são demonstrativos e podem ser personalizados.">
+<meta property="og:title" content="Site modelo — Estúdio de tatuagem">
+<meta property="og:description" content="Uma apresentação demonstrativa, pronta para ser personalizada para o seu estúdio.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Cpath d='M9 24V8l14 16V8' stroke='%23F5F5F2' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{syne:['Barlow Condensed','sans-serif'],manrope:['DM Sans','sans-serif']},colors:{ink:'#090909',ink2:'#101010',coal:'#181818',lift:'#202020',bone:'#F5F5F2',mid:'#A0A09A',dim:'#74746F'}}}}</script>
+<!-- 2. ESTILOS -->
+<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:z-[100] focus:bg-bone focus:text-ink focus:p-3">Pular para o conteúdo</a>
+
+<!-- 3. HEADER -->
+<header id="hdr" class="hdr fixed top-0 inset-x-0 z-50">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-10 h-[72px] flex items-center justify-between gap-6">
+    <a href="#top" class="font-syne font-extrabold tracking-[.12em] text-lg uppercase" aria-label="Site modelo — início">Site modelo</a>
+    <nav class="nav hidden lg:flex gap-9" aria-label="Principal">
+      <a href="#estudio">Estúdio</a><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="#artistas">Artistas</a><a href="#contato">Contato</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a data-ig target="_blank" rel="noopener noreferrer" class="hidden sm:grid place-items-center w-11 h-11 text-mid hover:text-bone transition" aria-label="Instagram (abre em nova aba)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+      <a data-wa="Olá! Conheci o estúdio pelo site e gostaria de agendar uma sessão." target="_blank" rel="noopener noreferrer" class="btn btn-ghost hidden md:inline-flex">Agendar sessão</a>
+      <button id="burger" class="lg:hidden w-11 h-11 grid place-items-center" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8h16M4 16h16"/></svg></button>
+    </div>
+  </div>
+  <nav id="mnav" class="hidden lg:hidden bg-ink/95 backdrop-blur border-t line px-5 py-6" aria-label="Menu mobile">
+    <ul class="flex flex-col">
+      <li><a href="#estudio" class="block py-4 border-b line font-syne text-2xl uppercase">Estúdio</a></li>
+      <li><a href="#servicos" class="block py-4 border-b line font-syne text-2xl uppercase">Serviços</a></li>
+      <li><a href="#trabalhos" class="block py-4 border-b line font-syne text-2xl uppercase">Trabalhos</a></li>
+      <li><a href="#artistas" class="block py-4 border-b line font-syne text-2xl uppercase">Artistas</a></li>
+      <li><a href="#contato" class="block py-4 font-syne text-2xl uppercase">Contato</a></li>
+    </ul>
+    <a data-wa="Olá! Conheci o estúdio pelo site e gostaria de agendar uma sessão." target="_blank" rel="noopener noreferrer" class="btn btn-solid w-full mt-6">Agendar sessão</a>
+  </nav>
+</header>
+
+<!-- 4. CONTEÚDO -->
+<main id="main">
+<!-- HERO -->
+<section id="top" class="relative min-h-[100svh] flex items-end overflow-hidden">
+  <div class="absolute inset-0 ph"><img src="./assets/img/studio/studio-artist-drawing.webp" style="object-position:55% 45%" alt="Tatuador com o braço tatuado concentrado enquanto desenha um projeto no estúdio" fetchpriority="high" width="1400" height="933" class="!filter-none opacity-70"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(9,9,9,.55) 0%,rgba(9,9,9,.25) 35%,rgba(9,9,9,.95) 100%)"></div>
+  <div class="relative max-w-[1400px] w-full mx-auto px-5 md:px-10 pb-12 pt-36">
+    <p class="meta mb-6 text-mid">Site modelo • Seu estúdio, sua cidade</p>
+    <h1 class="h-display t-hero">Sua arte.<br>Sua história<br class="md:hidden"> na pele.</h1>
+    <div class="mt-10 grid md:grid-cols-12 gap-8 items-end">
+      <p class="md:col-span-5 text-mid font-light leading-relaxed max-w-md">Este espaço é uma demonstração: personalize textos, fotos, serviços e contatos para apresentar a identidade do seu estúdio.</p>
+      <div class="md:col-span-7 flex flex-col sm:flex-row gap-3 md:justify-end">
+        <a href="#trabalhos" class="btn btn-solid">Explorar trabalhos</a>
+        <a data-wa="Olá! Conheci o trabalho do estúdio pelo site e gostaria de conversar sobre uma tatuagem personalizada." target="_blank" rel="noopener noreferrer" class="btn">Iniciar um projeto</a>
+      </div>
+    </div>
+    <div class="mt-12 pt-5 border-t line flex justify-between meta"><span data-city></span><span>Atendimento com hora marcada</span><a href="#estudio" class="hidden sm:inline hover:text-bone" aria-label="Rolar para o estúdio">Role ↓</a></div>
+  </div>
+</section>
+
+<!-- ESTÚDIO -->
+<section id="estudio" class="max-w-[1400px] mx-auto px-5 md:px-10 py-24 md:py-40">
+  <div class="grid md:grid-cols-12 gap-x-10 gap-y-14">
+    <div class="md:col-span-7 rv">
+      <p class="meta mb-6">01 / Nosso universo</p>
+      <h2 class="h-display t-h2">Mais tinta.<br>Uma forma de expressão.</h2>
+      <p class="mt-10 text-mid font-light leading-relaxed max-w-lg">Cada projeto começa com uma conversa. Investigamos referências, formas e histórias para desenvolver desenhos que respeitam a identidade de cada pessoa. O resultado não é apenas uma tatuagem: é uma obra criada em colaboração.</p>
+    </div>
+    <aside class="md:col-span-4 md:col-start-9 md:self-end rv" aria-label="Informações do estúdio">
+      <p class="meta mb-4">Visita</p>
+      <p class="text-sm text-mid mb-1" data-addr></p>
+      <p class="text-sm text-mid mb-6">Atendimento somente mediante agendamento.</p>
+      <dl class="text-sm border-t line">
+        <div class="flex justify-between py-3 border-b line"><dt class="text-mid">Segunda a sexta</dt><dd>10h–20h</dd></div>
+        <div class="flex justify-between py-3 border-b line"><dt class="text-mid">Sábado</dt><dd>10h–18h</dd></div>
+        <div class="flex justify-between py-3 border-b line"><dt class="text-mid">Domingo</dt><dd class="text-dim">Fechado</dd></div>
+      </dl>
+      <p class="text-xs text-dim mt-5 leading-relaxed">Materiais e espaço organizados e higienizados para cada atendimento. Confirme os procedimentos diretamente com o estúdio.</p>
+    </aside>
+    <div class="md:col-span-6 ph aspect-[4/5] rv"><img src="./assets/img/studio/studio-artist-drawing.webp" style="object-position:40% 50%" alt="Tatuador de perfil desenhando um projeto à mesa, com o braço totalmente tatuado" loading="lazy" width="900" height="1125"></div>
+    <div class="md:col-span-6 grid grid-cols-2 gap-5 md:gap-8 md:pt-24">
+      <div class="ph aspect-[3/4] rv"><img src="./assets/img/studio/studio-stencil-detail.webp" style="object-position:45% 45%" alt="Mãos tatuadas posicionando um estêncil ornamental sobre a pele" loading="lazy" width="600" height="800"></div>
+      <div class="ph aspect-square mt-12 rv"><img src="./assets/img/studio/studio-process-closeup.webp" style="object-position:45% 55%" alt="Tatuador de luvas pretas trabalhando com máquina no ombro de um cliente" loading="lazy" width="600" height="600"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="bg-ink2 py-24 md:py-36">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-10">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 rv">
+      <h2 class="h-display t-h2">O que<br>fazemos</h2>
+      <p class="text-mid font-light max-w-sm">Três frentes de trabalho, todas com avaliação individual antes de qualquer proposta.</p>
+    </div>
+    <div id="svc" class="grid md:grid-cols-3 md:gap-x-0"></div>
+    <p class="text-xs text-dim mt-8">Serviços demonstrativos: ajuste conforme o que o profissional realmente oferece (ex.: piercing).</p>
+  </div>
+</section>
+
+<!-- TRABALHOS -->
+<section id="trabalhos" class="max-w-[1400px] mx-auto px-5 md:px-10 py-24 md:py-40">
+  <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+    <div><p class="meta mb-5">02 / Coleção</p><h2 class="h-display t-h2">Trabalhos<br>selecionados</h2></div>
+    <div id="filters" class="flex flex-wrap -mx-1" role="group" aria-label="Filtrar por estilo"></div>
+  </div>
+  <div id="grid" class="grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-5 md:auto-rows-[190px]"></div>
+</section>
+
+<!-- ARTISTAS -->
+<section id="artistas" class="bg-ink2 py-24 md:py-36">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-10">
+    <h2 class="h-display t-h2 mb-4 rv">Artistas</h2>
+    <p class="text-xs text-dim mb-16">Perfis demonstrativos e editáveis — não representam pessoas reais.</p>
+    <div id="artists" class="grid md:grid-cols-2 md:max-w-4xl gap-12 md:gap-8"></div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="max-w-[1400px] mx-auto px-5 md:px-10 py-24 md:py-40">
+  <h2 class="h-display t-h2 max-w-3xl rv">Sua ideia é o primeiro traço.</h2>
+  <ol class="grid md:grid-cols-3 mt-16 border-t line">
+    <li class="py-8 md:pr-8 border-b md:border-b-0 md:border-r line rv"><span class="font-syne text-5xl text-dim">01</span><h3 class="font-syne font-bold uppercase mt-6 mb-3">Conte sua ideia</h3><p class="text-mid text-sm font-light leading-relaxed">Compartilhe referências, o local do corpo, as dimensões aproximadas e o conceito desejado.</p></li>
+    <li class="py-8 md:px-8 border-b md:border-b-0 md:border-r line rv"><span class="font-syne text-5xl text-dim">02</span><h3 class="font-syne font-bold uppercase mt-6 mb-3">Desenvolvemos o projeto</h3><p class="text-mid text-sm font-light leading-relaxed">O artista avalia a proposta, alinha expectativas e explica os próximos passos.</p></li>
+    <li class="py-8 md:pl-8 rv"><span class="font-syne text-5xl text-dim">03</span><h3 class="font-syne font-bold uppercase mt-6 mb-3">Confirmamos a sessão</h3><p class="text-mid text-sm font-light leading-relaxed">Após o alinhamento e as condições comerciais, o agendamento é combinado diretamente com o estúdio.</p></li>
+  </ol>
+  <div class="mt-12"><a data-wa="Olá! Quero contar minha ideia de tatuagem e entender os próximos passos." target="_blank" rel="noopener noreferrer" class="btn btn-solid">Conversar no WhatsApp</a>
+  <p class="text-xs text-dim mt-4">Valores, prazos e disponibilidade são definidos após a avaliação do projeto.</p></div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="max-w-[1400px] mx-auto px-5 md:px-10 pb-24 md:pb-40">
+  <div class="grid md:grid-cols-12 gap-10">
+    <h2 class="h-display t-h2 md:col-span-5">Dúvidas<br>frequentes</h2>
+    <div id="faqlist" class="md:col-span-7 border-t line"></div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="relative overflow-hidden border-t line">
+  <div class="absolute inset-0 ph"><img src="./assets/img/interface/contact-stencil-bg.webp" style="object-position:50% 40%" alt="" aria-hidden="true" loading="lazy" width="1600" height="900" class="opacity-25"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(90deg,#090909 25%,rgba(9,9,9,.6))"></div>
+  <div class="relative max-w-[1400px] mx-auto px-5 md:px-10 py-28 md:py-44">
+    <h2 class="h-display t-hero">Vamos criar<br>algo seu.</h2>
+    <p class="mt-10 text-mid font-light max-w-md leading-relaxed">Compartilhe sua ideia, apresente suas referências e descubra as possibilidades de transformar o conceito em uma peça autoral.</p>
+    <div class="mt-10 flex flex-col sm:flex-row gap-3">
+      <a data-wa="Olá! Conheci o trabalho do estúdio pelo site e gostaria de conversar sobre uma tatuagem personalizada." target="_blank" rel="noopener noreferrer" class="btn btn-solid">Iniciar conversa no WhatsApp</a>
+      <a data-ig target="_blank" rel="noopener noreferrer" class="btn">Ver o Instagram</a>
+    </div>
+    <p class="meta mt-12"><span data-addr></span> • Atendimento com hora marcada</p>
+  </div>
+</section>
+</main>
+
+<!-- 5. FOOTER -->
+<footer class="border-t line py-16">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-10 grid gap-12 md:grid-cols-12">
+    <div class="md:col-span-5"><p class="font-syne font-extrabold tracking-[.12em] text-lg uppercase">Site modelo</p><p class="text-mid text-sm mt-4 max-w-xs" data-tag></p></div>
+    <div class="md:col-span-3 text-sm text-mid space-y-2"><p class="meta mb-3">Contato</p><p data-addr></p><a data-mail class="block hover:text-bone"></a><a data-wa="" target="_blank" rel="noopener noreferrer" class="block hover:text-bone" data-phone></a></div>
+    <nav class="md:col-span-2 text-sm text-mid space-y-2" aria-label="Rodapé"><p class="meta mb-3">Seções</p><a class="block hover:text-bone" href="#estudio">Estúdio</a><a class="block hover:text-bone" href="#servicos">Serviços</a><a class="block hover:text-bone" href="#trabalhos">Trabalhos</a><a class="block hover:text-bone" href="#artistas">Artistas</a></nav>
+    <div class="md:col-span-2 text-sm text-mid space-y-2"><p class="meta mb-3">Social</p><a data-ig target="_blank" rel="noopener noreferrer" class="block hover:text-bone">Instagram</a><a data-tt target="_blank" rel="noopener noreferrer" class="block hover:text-bone">TikTok</a><a data-pin target="_blank" rel="noopener noreferrer" class="block hover:text-bone">Pinterest</a></div>
+  </div>
+  <div class="max-w-[1400px] mx-auto px-5 md:px-10 mt-14 pt-6 border-t line flex flex-col sm:flex-row justify-between gap-3 text-xs text-dim">
+    <p>© <span id="yr"></span> <span data-name></span>. Site demonstrativo.</p>
+    <p>Desenvolvido por <a data-credit target="_blank" rel="noopener noreferrer" class="underline hover:text-bone"></a></p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lb" class="fixed inset-0 z-[90] bg-ink/95 items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Visualização do trabalho">
+  <button id="lbx" class="absolute top-4 right-4 w-12 h-12 text-2xl" aria-label="Fechar">✕</button>
+  <button id="lbp" class="absolute left-2 md:left-6 top-1/2 w-12 h-12 text-2xl" aria-label="Anterior">‹</button>
+  <button id="lbn" class="absolute right-2 md:right-6 top-1/2 w-12 h-12 text-2xl" aria-label="Próximo">›</button>
+  <figure class="max-w-[92vw] max-h-[88vh]"><img id="lbi" alt="" class="max-h-[78vh] max-w-full object-contain mx-auto"><figcaption id="lbc" class="meta text-center mt-4"></figcaption></figure>
+</div>
+
+<!-- 6. CONFIG + JS -->
+<script src="./assets/js/main.js" defer></script>
+</body>
+</html>
